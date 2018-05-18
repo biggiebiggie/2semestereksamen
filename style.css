@@ -1,0 +1,52 @@
+/* Generelt */
+
+* {
+	margin: 0;
+}
+
+/* Logo */
+
+.logo_container {
+
+	height: 30vw;
+	width: 20vw;
+}
+
+.logo_container img {
+	height: 100%;
+	width: 100%;
+}
+
+
+/* Menu */
+
+nav {
+	position: absolute;
+}
+a {
+	text-decoration: none;
+	color: saddlebrown;
+}
+
+li {
+	list-style-type: none;
+}
+
+/* Footer */
+
+/* Desktop */
+
+#intro_site {
+    z-index: 5;
+    margin: 0;
+	width: 100vw;
+	height: 56vw;
+}
+
+video {
+    position: absolute;
+	width: 100vw;
+    overflow: hidden;
+    margin: 0;
+	z-index: -1;
+}

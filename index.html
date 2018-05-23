@@ -21,7 +21,7 @@
 			<div class="menu_container">
 				<nav id="forside_menu">
 					<ul>
-						<li><a href="index.html">Forside</a>
+						<li><a class="active" href="index.html">Forside</a>
 						<li><a href="works.html">Værker</a>
 						<li><a href="Konceptet">Konceptet</a>
 						<li><a href="Om">Om</a>
@@ -37,11 +37,43 @@
 
 			</div>
 		</section>
-		<section>
 
+		<section id="find_vej">
+			<div id="floating-panel">
+				<p data-address id="address" value="ny, Jægersborggade 43, 2200 København, Danmark"></p>
+				<input id="submit" type="button" value="Geocode" placeholder="">
+			</div>
+			<div id="map"></div>
 		</section>
 	</div>
 
-	<script src="script.js"></script>
+	<script>
+	      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: {lat: 55.684145, lng: 12.568984}
+        });
+        var geocoder = new google.maps.Geocoder();
+
+          window.addEventListener("load", function(){
+          geocodeAddress(geocoder, map);
+        });
+      }
+
+      function geocodeAddress(geocoder, resultsMap) {
+        var address = document.getElementById('address').value;
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
+            resultsMap.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+              map: resultsMap,
+              position: results[0].geometry.location
+            });
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      }
+	</script>
 </body>
 </html>

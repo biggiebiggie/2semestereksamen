@@ -1,37 +1,33 @@
-let jsonUrl = "http://mixel.dk/kea/food8/wordpress/wp-json/wp/v2/steder";
-let steder = [];
-
+let jsonUrl = "http://mixel.dk/kea/vincents/wordpress/wp-json/wp/v2/produkter/";
+let products = [];
 let display = document.querySelector("section");
 let template = document.querySelector("template");
 
 document.addEventListener("DOMContentLoaded", hentJson);
 
 async function hentJson() {
-    let dataJson = await fetch(jsonUrl);
-    steder = await dataJson.json();
-    console.log(steder);
+	let dataJson = await fetch(jsonUrl);
+	products = await dataJson.json();
+	console.log(products);
 
-    visSteder();
-
+	showProducts();
 }
 
-        function visSteder()  {
-            steder.forEach(sted => {
-                let klon = template.cloneNode(true).content;
+function showProducts()  {
+	products.forEach(product => {
+		let klon = template.cloneNode(true).content;
 
-                klon.querySelector("[data-header]").textContent = sted.title.rendered;
+		klon.querySelector("[data-name]").textContent = product.title.rendered;
 
-                klon.querySelector("[data-image]").src = sted.acf.logo.url;
+		klon.querySelector("[data-image]").src = product.acf.billede.url;
 
-                klon.querySelector("[data-image]").alt = sted.title.rendered;
+		klon.querySelector("[data-image]").alt = product.title.rendered;
 
-                //                klon.querySelector(".ret").setAttribute("data-id", hverRet.id);
+		klon.querySelector("article").addEventListener("click", () => {
+			if (product.acf)
+				location.href = "single.html?id=" + product.id;
+		});
 
-                klon.querySelector("article").addEventListener("click", () => {
-                    if (sted.acf)
-                        location.href = "single.html?id=" + sted.id;
-                });
-
-                display.appendChild(klon);
-            });
-        }
+		display.appendChild(klon);
+	});
+}

@@ -17,36 +17,100 @@
 	width: 100%;
 }
 
+/* Tekster */
+
+h1 {
+	text-align: center;
+}
+
 
 /* Menu */
 
-nav {
+forside_menu nav {
 	position: absolute;
 }
-a {
+
+forside_menu li a {
 	text-decoration: none;
 	color: saddlebrown;
 }
 
+nav {
+}
+
+ul {
+	display: flex;
+	justify-content: space-around;
+	margin: 0;
+    padding: 0;
+	width: 100%;
+	position: fixed;
+	background-color: aqua;
+
+}
+
 li {
-	list-style-type: none;
+	display: block;
+	background-color: royalblue;
+	list-style: none;
+
+}
+li a {
+	text-decoration: none;
+}
+
+
+/* Forside */
+
+#myVideo {
+	display: none;
+}
+
+
+/* Værker*/
+
+
+.image_box {
+	margin: 0 auto;
+}
+
+.image {
+	width: 100%;
 }
 
 /* Footer */
 
 /* Desktop */
 
-#intro_site {
-    z-index: 5;
-    margin: 0;
-	width: 100vw;
-	height: 56vw;
-}
+@media (min-width: 1281px) {
 
-video {
-    position: absolute;
-	width: 100vw;
-    overflow: hidden;
-    margin: 0;
-	z-index: -1;
+/* Værker desktop */
+
+	#products_container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 2vw;
+	}
+
+
+/* Video desktop */
+
+	#myVideo {
+		display: block;
+	}
+
+	#intro_site {
+		z-index: 5;
+		margin: 0;
+		width: 100vw;
+		height: 56vw;
+	}
+
+	video {
+		position: absolute;
+		width: 100vw;
+		overflow: hidden;
+		margin: 0;
+		z-index: -1;
+	}
 }

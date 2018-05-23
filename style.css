@@ -78,11 +78,8 @@ li a:hover:not(.active) {
 
 #map {
 	margin: 0 auto;
-	margin-bottom: 3vw;
 	border: 0px solid;
 
-	width: 100%;
-	height: 40vh;
 }
 
 input#submit {

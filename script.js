@@ -31,3 +31,11 @@ function showProducts()  {
 		display.appendChild(klon);
 	});
 }
+
+	function toggleMenu() {
+		document.querySelector(".burger_menu").classList.toggle("change");
+		document.querySelector("#hovedmenu").classList.toggle("show");
+	}
+
+	document.querySelector(".burger_menu").addEventListener("click", toggleMenu);
+	document.querySelector("#hovedmenu").addEventListener("click", toggleMenu);

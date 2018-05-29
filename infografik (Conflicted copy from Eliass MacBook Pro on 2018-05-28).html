@@ -1,0 +1,22 @@
+<!doctype html>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+	$.get('assets/infografik.svg', function(data) {
+		$(document.body).append(data.documentElement);
+		init();
+	});
+
+	function init() {
+		$('#info1, #info2, #info3, #info4').hide();
+	}
+
+	$('#knap1').click(function() {
+		$('#info1').toggle();
+	console.log("clicked");
+	});
+
+</script>
+<style>
+	/* Add CSS here */
+
+</style>

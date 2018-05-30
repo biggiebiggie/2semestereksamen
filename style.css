@@ -1,13 +1,11 @@
-/* Generelt */
+/* Overall */
+
+/************/
 
 * {
     margin: 0;
+    padding: 0;
     line-height: 1.5;
-    font-weight: 300;
-}
-
-a {
-    text-decoration: none;
 }
 
 body {
@@ -15,8 +13,18 @@ body {
     font-weight: 300;
 }
 
-main {
-    background-color: white;
+
+
+/* Heading */
+
+/*************/
+
+h1 {
+    font-size: 2em;
+    line-height: 5;
+    text-align: center;
+    margin-bottom: 50px;
+    ;
 }
 
 h2 {
@@ -26,30 +34,33 @@ h2 {
 }
 
 
+
 /* Nav Menu */
 
-section#intro_site #menu {
+/************/
+
+nav#forside_menu {
     opacity: 0;
     display: none;
     transition: all 0.4s ease;
 }
 
-section#intro_site:hover #menu {
+section#intro_site:hover nav#forside_menu {
     opacity: 1;
+    background-color: blue;
 }
 
-#menu ul {
-    margin: 50px 0 0 0;
-    padding: 0;
+nav#forside_menu ul {
+    margin: 40px 0 0 0;
     list-style-type: none;
     width: 250px;
-    height: 160px;
+    height: 120px;
     position: absolute;
     left: calc(50% - 125px);
     top: calc(50%);
 }
 
-#menu ul li {
+nav#forside_menu ul li {
     color: white;
     background-color: none;
     line-height: 40px;
@@ -57,20 +68,22 @@ section#intro_site:hover #menu {
     font-size: 1.2em;
 }
 
-#menu ul li a {
+nav#forside_menu ul li a {
     color: white;
     opacity: 0.75;
     text-decoration: none;
 }
 
-#menu ul li a:hover {
+nav#forside_menu ul li a:hover {
     opacity: 1;
 }
 
 
 /* Logo */
 
-section#intro_site:hover .logo {
+/********/
+
+section#intro_site:hover #logo {
     position: absolute;
     left: calc(50% - 125px);
     top: calc(50% - 125px);
@@ -78,7 +91,7 @@ section#intro_site:hover .logo {
     margin-top: 0;
 }
 
-section#intro_site .logo {
+#logo {
     transition: all 0.4s ease;
     width: 250px;
     height: 250px;
@@ -88,17 +101,21 @@ section#intro_site .logo {
     margin-top: 0;
 }
 
-section#intro_site .logo img {
+#logo img {
+    background-color: none;
+    width: 250px;
     height: 150px;
+    left: calc(50% - 125px);
+    top: calc(50% - 250px);
     position: relative;
 }
 
-section#intro_site .logo .title {
+#logo .title {
     height: 75px;
     position: relative;
 }
 
-section#intro_site .logo .title h1 {
+#logo .title h1 {
     height: 125px;
     margin-top: 10px;
     position: relative;
@@ -109,21 +126,14 @@ section#intro_site .logo .title h1 {
     font-weight: 400;
 }
 
-section#intro_site .logo .title h1 span {
+#logo .title h1 span {
     font-weight: 100;
     display: block;
     font-size: 0.7em;
 }
 
 section#intro_site img {
-    background-color: none;
-    width: 250px;
-    height: 250px;
-    position: absolute;
-    left: calc(50% - 125px);
-    top: calc(50% - 250px);
-
-    /* No stealing */
+    /* Ingen kopiering af billeder */
     user-drag: none;
     user-select: none;
     -moz-user-select: none;
@@ -133,11 +143,14 @@ section#intro_site img {
     transition: all 0.3s ease;
 }
 
-section#intro_site .logo:hover {
+#logo:hover {
     transform: scale(1.05);
 }
 
-/* arrow */
+
+/* Arrow */
+
+/*********/
 
 section#intro_site .arrow {
     opacity: 0.7;
@@ -157,7 +170,10 @@ section#intro_site .arrow:hover {
     opacity: 1;
 }
 
+
 /* Video */
+
+/*********/
 
 section#intro_site {
     position: relative;
@@ -181,32 +197,20 @@ video {
     background-color: white;
 }
 
-/* Header, submenu */
-
-/* Menu */
-
-#forside_menu li a {
-    text-decoration: none;
-    padding: 14px 16px;
-}
-
-#forside_menu li {
-    display: block;
-    background-color: royalblue;
-    list-style: none;
-}
 
 /* Burger Menu */
 
+/***************/
+
 .burger_icon {
     position: fixed;
+    margin: 10px;
     top: 0;
     left: 0;
     z-index: 16;
     cursor: pointer;
     width: 40px;
     height: 33px;
-    background-color: green;
     transition: 1s ease;
 }
 
@@ -215,22 +219,21 @@ video {
 .bar3 {
     width: 30px;
     height: 3px;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.78);
     margin: 6px auto;
     transition: 0.4s ease;
     z-index: 20;
 }
 
-/*Rotering */
+
+/* Rotering af menuen */
 
 .change .bar1 {
     transform: rotate(-45deg) translate(-8px, 10px);
-    background-color: black;
 }
 
 .change .bar3 {
     transform: rotate(45deg) translate(-3px, -4px);
-    background-color: black;
 }
 
 /** Fade **/
@@ -241,22 +244,18 @@ video {
 
 #burger_menu {
     display: none;
-    z-index: 15;
+    top: 0;
+    left: 0;
+
+    z-index: 9;
     width: 30vw;
     height: 100vh;
-    max-height: 0px;
     min-width: 100px;
-    overflow: hidden;
-    margin: 0;
-    padding-left: 7.5vw;
-    padding-top: 15vw;
-    background-color: rgba(255, 255, 255, 0.77);
+    background-color: white;
     text-align: left;
     position: absolute;
-    top: 0vw;
     transition: 0.8s ease;
 }
-
 
 #burger_menu.show {
     display: block;
@@ -264,7 +263,7 @@ video {
     width: 50vw;
     height: 100vh;
     margin: 0;
-    z-index: 105;
+    z-index: 15;
 }
 
 #burger_menu a {
@@ -276,18 +275,16 @@ video {
 }
 
 
-#forside_menu {
-    display: none;
-}
+/* Header med navigation */
 
-
-/* Header */
+/*************************/
 
 header {
     display: flex;
     justify-content: center;
+
     margin: 0;
-    height: 50px;
+    height: 0px;
     background-color: white;
     overflow: hidden;
     padding: 0;
@@ -310,6 +307,8 @@ header {
 
 #submenu li {
     float: left;
+    width: 25vw;
+    max-width: 100px;
     border-right: 1px solid #eee;
 }
 
@@ -334,7 +333,19 @@ header {
     color: #767676;
 }
 
+
+/** Main **/
+
+/***********/
+
+main {
+    background-color: white;
+}
+
+
 /* Content */
+
+/************/
 
 section#content {
     position: relative;
@@ -387,7 +398,149 @@ section#content .wrapper article img {
     opacity: 0.7;
 }
 
+
+/* Find Vej / Map */
+
+/******************/
+
+section#find_vej {
+    position: relative;
+    margin-bottom: 0px;
+    background-color: white;
+
+    padding: 0 0 50px 0;
+}
+
+section#find_vej .wrapper {
+    max-width: 1080px;
+    margin: auto;
+    width: 90%;
+    display: grid;
+    background-color: white;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+}
+
+section#find_vej .wrapper .tekst {
+    background-color: #eee;
+    padding: 25px;
+    line-height: 1.7;
+    height: 350px;
+}
+
+section#find_vej .wrapper #map {
+    position: relative;
+    margin: 0 auto;
+    background-color: white;
+    width: 100%;
+    height: 350px;
+}
+
+
+/* Footer */
+
+/**********/
+
+footer {
+    position: relative;
+    bottom: 0;
+    z-index: 0;
+    color: rgba(255, 255, 255, 0.86);
+    background-color: #343434;
+    display: block;
+}
+
+footer .wrapper {
+    position: relative;
+    display: grid;
+    margin: 0px auto;
+    padding: 20px 0;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+footer .wrapper article {
+    width: 70%;
+    max-width: 250px;
+    margin: 0px auto;
+    padding: 20px 0;
+}
+
+footer .wrapper article:nth-child(3) {
+    display: none;
+}
+
+footer img {
+    padding: 90px 0 40px 0;
+    margin: 0px auto;
+    width: 60px;
+    display: block;
+}
+
+footer .wrapper article:nth-child(2) {
+
+    border-top: 1px solid rgba(255, 255, 255, 0.64);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.64);
+}
+
+footer .wrapper article p,
+h3 {
+    line-height: 1.5;
+    margin: 30px 0;
+}
+
+footer .wrapper article ul {
+    list-style-type: none;
+}
+
+footer .wrapper article ul li a {
+    color: white;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Værker*/
+
+.image_box {
+    margin: 0 auto;
+}
+
+.image {
+    width: 100%;
+}
+
+/* Desktop */
+
+.previous_btn {
+    left: 50px;
+}
+
+.next_btn {
+    right: 50px;
+}
+
+
+
+
+
+
+
+
+
+
 /* Slider */
+
+/***********/
 
 section#showcase {
     position: relative;
@@ -511,127 +664,48 @@ a.slide_btn {
     opacity: 1;
 }
 
-/* Find Vej / Map */
 
-section#find_vej {
-    position: relative;
-    margin-bottom: 0px;
-    background-color: white;
 
-    padding: 0 0 50px 0;
-}
 
-section#find_vej .wrapper {
-    max-width: 1080px;
-    margin: auto;
-    width: 90%;
-    display: grid;
-    background-color: white;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 30px;
-}
 
-section#find_vej .wrapper .tekst {
-    background-color: #eee;
-    padding: 25px;
-    line-height: 1.7;
-    height: 350px;
-}
 
-section#find_vej .wrapper #map {
-    position: relative;
-    margin: 0 auto;
-    background-color: white;
-    width: 100%;
-    height: 350px;
-}
 
-/* Footer */
 
-footer {
-    position: relative;
-    bottom: 0;
-    z-index: 0;
-    color: rgba(255, 255, 255, 0.86);
-    background-color: #343434;
-}
 
-footer .wrapper {
-    position: relative;
-    display: grid;
-    padding: 20px 0 10px 0;
-    margin: 0 auto;
-    grid-template-columns: repeat(1, 1fr);
-}
 
-footer .wrapper article {
-    width: 70%;
-    min-width: 300px;
-    margin: 0 auto;
-}
 
-footer .wrapper img {
-    width: 60px;
-    margin: 40px auto;
-}
 
-footer .wrapper article:nth-child(2) {
 
-    border-top: 1px solid rgba(255, 255, 255, 0.64);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.64);
-}
 
-footer .wrapper article p,
-h3 {
-    line-height: 1.5;
-    margin: 30px 0;
-}
 
-footer .wrapper article ul {
-    list-style-type: none;
-    font-size: 1.2em;
-    display: none;
-}
 
-footer .wrapper article ul li a {
-    color: white;
-    text-align: left;
-}
 
-/* Værker*/
 
-.image_box {
-    margin: 0 auto;
-}
 
-.image {
-    width: 100%;
-}
 
-/* Desktop */
 
-.previous_btn {
-    left: 50px;
-}
 
-.next_btn {
-    right: 50px;
-}
 
-@media screen and (min-width: 700px) {
+
+@media screen and (min-width: 900px) {
+
+    /* Header */
+    header {
+        height: 50px;
+    }
 
     /* Logo */
-    section#intro_site #menu {
+    section#intro_site #forside_menu {
         display: block;
     }
 
-    section#intro_site:hover .logo {
+    section#intro_site:hover #logo {
         left: calc(50% - 125px);
         top: calc(50% - 250px);
         margin: 0;
     }
 
-    section#intro_site .logo {
+    section#intro_site #logo {
         left: calc(50% - 125px);
         top: calc(50% - 250px);
         margin-top: 125px;
@@ -676,10 +750,6 @@ footer .wrapper article ul li a {
         height: 400px;
     }
 
-    main {
-        margin-bottom: 400px;
-    }
-
     /* Værker desktop */
     #products_container {
         position: relative;
@@ -714,63 +784,57 @@ footer .wrapper article ul li a {
         display: block;
     }
 
-    /** Footer **/
 
 
-    footer {
-        position: fixed;
-        bottom: 0;
-        z-index: -5;
-        height: 400px;
-        margin-top: 50px;
+
+
+
+    /* Footer */
+    /**********/
+
+    footer .wrapper {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1080px;
+        grid-gap: 30px;
+        width: 90%;
         overflow: hidden;
     }
 
-    footer .wrapper {
-        display: grid;
-        margin: 0 auto;
-        max-width: 1280px;
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    footer .wrapper {
-        grid-template-columns: repeat(3, 1fr);
-        padding-bottom: 50px;
-        height: auto;
-    }
-
     footer .wrapper article {
-        min-width: 100px;
         margin: 0 auto;
-        background-color: green;
+        width: 100%;
+        padding: 30px;
     }
 
-    footer .wrapper img {
-        display: none;
-        width: 60px;
-        margin: 40px auto;
+
+    footer .wrapper article:nth-child(3) {
+        display: block;
     }
 
     footer .wrapper article:nth-child(2) {
         border: none;
     }
 
-    footer .wrapper article ul {
-        list-style-type: none;
-        font-size: 1.2em;
-        display: none;
-    }
-
-    footer .wrapper article ul li a {
-        color: white;
-        text-align: left;
-    }
 
 
-    footer .wrapper article ul {
-        list-style-type: none;
-        font-size: 1.2em;
-        display: block;
+
+
+
+    /* Landingpage */
+    section#landingpage .wrapper {
+        padding: 25px 0 30px 0;
+        margin: 0px auto 0;
+        max-width: 1080px;
+        background-color: white;
+        width: 90%;
+        position: relative;
     }
+
+    section#landingpage .wrapper iframe {
+        width: 100%;
+        height: 500px;
+    }
+
+
 
 }

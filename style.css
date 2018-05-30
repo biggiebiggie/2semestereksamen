@@ -753,27 +753,39 @@ a.slide_btn {
     /* Værker desktop */
     #products_container {
         position: relative;
-        display: grid;
-        width: 90%;
-        max-width: 1080px;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 2vw;
-        margin: 50px auto 0 auto;
-        padding-bottom: 50px;
     }
 
-    #products_container article {
+    #products_container .product {
         position: relative;
-        background-color: white;
-        height: 400px;
+        height: 300px;
         overflow: hidden;
+    }
+
+    #products_container .product h2 {
+        position: absolute;
+        color: white;
+        z-index: 10;
+    }
+
+    #products_container article .product .image_box {
+        position: absolute;
+        min-width: 250%;
+        top: -125%;
+        min-height: 250%;
+    }
+
+    #products_container article:nth-child(2) .product .image_box {
+        position: relative;
+        margin: 0;
+        float: right;
     }
 
     #products_container article img {
         position: absolute;
-        height: 100%;
+        width: 100%;
         opacity: 0.8;
     }
+
 
     .burger_icon,
     .burger_menu {

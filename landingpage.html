@@ -106,31 +106,20 @@
 
     </main>
 
-    <footer>
-        <div class="wrapper">
+    <section id="footer">
+    </section>
 
-            <article>
-                <p>Ceramics studio &amp; shop<br> Jægersborggade 43 (NEW)<br> DK-2200 København N</p>
+    <script>
+        document.addEventListener("DOMContentLoaded", hentFooter);
 
-                <p>(+ 45) 40 70 17 50<br> (+ 45) 36 96 68 50</p>
+        async function hentFooter() {
+            let footerData = await fetch("footer.html");
+            let footer = await footerData.text();
+            document.querySelector("#footer").innerHTML = footer;
+        }
+    </script>
 
-                <p>inge@vincents.dk</p>
-            </article>
-            <article>
-                <h3>En forespørgsel?</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptas labore dolor, incidunt velit ullam molestiae dolorum enim. Ullam pariatur, fugiat tenetur corporis nemo odio libero? Fugit quidem, voluptates necessitatibus!</p>
-            </article>
-            <article>
-                <ul>
-                    <li><a class="active upup">Forside</a></li>
-                    <li><a href="works.html">Værker</a></li>
-                    <li><a href="koncept.html">Konceptet</a></li>
-                    <li><a href="omos.html">Om os</a></li>
-                </ul>
-            </article>
-            <img src="assets/logo-hvid.svg" alt="mini logo" />
-        </div>
-    </footer>
+
 </body>
 
 </html>

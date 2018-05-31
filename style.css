@@ -770,6 +770,62 @@ a.slide_btn {
 
 
 
+/* Om os */
+
+#banner {
+    height: 400px;
+    background-image: url('assets/omos_banner.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+    max-width: 1080px;
+    margin: 20px auto 0 auto;
+    margin-bottom: 40px
+}
+
+
+section#omos .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto 75px auto;
+    width: 90%;
+    max-width: 1080px;
+    grid-gap: 25px;
+}
+
+section#omos .wrapper article {
+    background-color: #eee;
+    height: 300px;
+}
+
+section#omos .profil {
+    width: 90%;
+    max-width: 1080px;
+    margin: 50px auto;
+}
+
+section#omos .profil h2 {
+    width: 400px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+section#omos .profil p {
+    width: 400px;
+    margin: 0 auto 50px auto;
+}
+
+section#omos .profil img {
+    margin: 50px auto;
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+
+
+
 
 
 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keramiker Inge Vincents - Om os</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="style.css">
+    <meta name="Showroom Keramiker Inge Vincents" content="Showroom om Keramiker Inge Vincents værker">
+    <meta name="description" content="Keramiker Inge Vincents laver unikt tyndt keramik kaldet thinware | Baseret på Nørrebro, Jægersborggade">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav id="submenu">
+            <ul>
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="works.html">Værker</a></li>
+                <li><a href="koncept.html">Konceptet</a></li>
+                <li><a class="active" href="omos.html">Om os</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="banner">
+            <img src="">
+        </section>
+
+        <section id="omos">
+
+            <div class="profil">
+                <img src="assets/inge.jpg" alt="Portræt" />
+                <h2>Inge Vincents</h2>
+                <p>Odio consequuntur quis dolorum consequatur natus officiis nesciunt, doloribus vel ipsum placeat aliquam soluta et architecto tempora sapiente deleniti aspernatur error praesentium.</p>
+            </div>
+
+            <div class="wrapper">
+                <article>d</article>
+                <article>d</article>
+                <article>d</article>
+            </div>
+        </section>
+
+
+    </main>
+
+    <section id="footer">
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", hentFooter);
+
+        async function hentFooter() {
+            let footerData = await fetch("footer.html");
+            let footer = await footerData.text();
+            document.querySelector("#footer").innerHTML = footer;
+        }
+    </script>
+
+
+</body>
+
+</html>

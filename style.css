@@ -767,7 +767,6 @@ a.slide_btn {
 
 
 
-<<<<<<< HEAD
 /* Singleview */
 
 #single_item,  h1  {
@@ -792,8 +791,6 @@ a.slide_btn {
 }
 
 /* Desktop */
-=======
->>>>>>> origin/master
 
 
 
@@ -820,20 +817,11 @@ a.slide_btn {
     }
 
     /* Logo */
-<<<<<<< HEAD
-
-    section#intro_site #menu {
-        display: block;
-    }
-
-   	section#intro_site:hover .logo {
-=======
     section#intro_site #forside_menu {
         display: block;
     }
 
     section#intro_site:hover #logo {
->>>>>>> origin/master
         left: calc(50% - 125px);
         top: calc(50% - 250px);
         margin: 0;
@@ -931,7 +919,6 @@ a.slide_btn {
 
         margin: 0px auto 30px auto;
     }
-
 
 
 

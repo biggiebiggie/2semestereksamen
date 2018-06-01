@@ -25,6 +25,21 @@
             </ul>
         </nav>
     </header>
+    <div class="burger_icon">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
+    <nav id="burger_menu">
+        <ul>
+            <li><a class="active" href="index.html">Forside</a></li>
+            <li><a href="works.html">Værker</a></li>
+            <li><a href="konceptet.html">Konceptet</a></li>
+            <li><a href="omos.html">Om os</a></li>
+        </ul>
+    </nav>
+
     <main>
        <div class="container">
         <section id="products_container">
@@ -46,13 +61,10 @@
 			<p data-vedligeholdelse>bla bla bbla bl alablab</p>
 		</div>
 	</section>
-    </div>
-</div>
-        </section>
-        <section id="side_products">
-
-        </section>
-        </div>
+					</div>
+			</div>
+		   </section>
+		</div>
     </main>
 
 
@@ -62,7 +74,9 @@
 		<div class="product" data-product>
 			<div class="id" data-id></div>
 
-			<h2 class="navn" data-name></h2>
+            <div class="tekst">
+                <h2 class="navn" data-name></h2>
+            </div>
 
 			<div class="image_box">
 			    <img class="image" data-image src="" alt="">
@@ -71,7 +85,7 @@
 		</article>
 	</template>
 
-<!--
+    <!--
     <section id="footer">
     </section>
 
@@ -89,6 +103,16 @@
 
 
     <script src="script.js">
+    </script>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".burger_icon").classList.toggle("change");
+            document.querySelector("#burger_menu").classList.toggle("show");
+        }
+
+        document.querySelector(".burger_icon").addEventListener("click", toggleMenu);
+        document.querySelector("#burger_menu").addEventListener("click", toggleMenu);
     </script>
 </body>
 

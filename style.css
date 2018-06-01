@@ -38,6 +38,10 @@ h3 {
     font-weight: 400;
 }
 
+h4 {
+    font-weight: 400;
+}
+
 
 
 /* Nav Menu */
@@ -209,12 +213,12 @@ video {
 
 .burger_icon {
     position: fixed;
-    margin: 10px;
+    margin: 5%;
     top: 0;
     left: 0;
     z-index: 16;
     cursor: pointer;
-    width: 40px;
+    width: 30px;
     height: 33px;
     transition: 1s ease;
 }
@@ -568,6 +572,7 @@ section#showcase {
     position: relative;
     height: 465px;
     background-color: white;
+    display: none;
 }
 
 .slider {
@@ -693,124 +698,111 @@ a.slide_btn {
 
 .container {
     position: relative;
-    width: 100vw;
-    height: calc(100vh - 50px);
+    width: auto;
+    height: auto;
+    overflow: auto;
     display: grid;
-    grid-template-columns: 1fr 300px;
+    grid-template-columns: 1fr;
 }
 
 #products_container {
-    background-color: #eee;
-    background-image: url('assets/lysposer.jpg');
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#products_container article {
-    width: 400px;
-    height: 300px;
-    background-color: white;
+    display: none;
 }
 
 #side_products {
-    overflow: auto;
-    overflow-y:scroll;
+    display: grid;
+    grid-template-columns: 1fr;
     background-color: white;
+    height: auto;
+    margin: 50px 0 0 0;
 }
 
 #side_products article {
-    height: 150px;
-    padding: 35px;
-    border-bottom: 1px solid #eee;
-    opacity: 0.8;
-    background: url(assets/lysposer.jpg);
-    background-size: calc(100% - 70px);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: white;
-}
-
-
-#products_container .product {
     position: relative;
-    height: 300px;
+    height: 400px;
+
+    width: 80%;
+    margin: 0px auto;
+    padding: 10px 0px;
+    border-bottom: 1px solid #eee;
+    opacity: 0.6;
+    transition: all 0.4s ease;
     overflow: hidden;
 }
 
-#products_container .product h2 {
-    position: absolute;
-    color: white;
-    z-index: 10;
+#side_products article:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
 
-#products_container article .product .image_box {
-    position: absolute;
-    min-width: 250%;
-    top: -125%;
-    min-height: 250%;
-}
-
-#products_container article:nth-child(2) .product .image_box {
+#side_products article .product .image_box {
     position: relative;
-    margin: 0;
-    float: right;
+    overflow: hidden;
+    height: 360px;
+    margin-top: 20px;
+    background-color: white;
+    z-index: -1;
 }
 
-#products_container article img {
+#side_products article .product .image_box img {
     position: absolute;
-    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
 }
 
-
-
-
+#side_products article .product h2 {
+    color: #393939;
+    background-color: white;
+    position: absolute;
+    z-index: 10;
+    top: calc(50% - 25px);
+    height: 50px;
+    top: 50;
+    text-align: center;
+    line-height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+    font-size: 1.2em;
+}
 
 
 /* Singleview */
 
-#single_item,  h1  {
-	text-align: center;
+/***************/
+
+#single_item,
+h1 {
+    text-align: center;
 }
 
 .single_image_top {
-	width: 80vw;
-	height: auto;
+    width: 80vw;
+    height: auto;
 
-	margin: 0 auto;
+    margin: 0 auto;
 }
 
-.single_container_text  {
-	margin: 0 2vw 0 2vw;
+.single_container_text {
+    margin: 0 2vw 0 2vw;
 }
+
 .product_1 {
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
 
 
 }
 
 /* Desktop */
 
-
-
 /* Om os */
-
-#banner {
-    height: 400px;
-    background-image: url('assets/omos_banner.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.8;
-    max-width: 1080px;
-    margin: 20px auto 0 auto;
-    margin-bottom: 40px
-}
-
 
 section#omos .wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     margin: 0 auto 75px auto;
     width: 90%;
     max-width: 1080px;
@@ -818,50 +810,60 @@ section#omos .wrapper {
 }
 
 section#omos .wrapper article {
-    background-color: #eee;
-    height: 300px;
+    padding: 0px 30px;
+    margin: 0px 0 30px 0;
+}
+
+section#omos .wrapper article h3 {
+    font-size: 2em;
+    margin: 15px 0 0 0;
+}
+
+section#omos .wrapper article h4 {
+    font-size: 1.2em;
+    margin: 5px 0 10px 0;
+    padding: 0;
 }
 
 section#omos .profil {
     width: 90%;
+    padding: 0px 0;
     max-width: 1080px;
+    background: #eee;
     margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+
+section#omos .profil .tekst {}
+
+section#omos .profil .billede {}
+
+
+section#omos .profil .tekst .inner {
+    margin: 0px auto 50px auto;
 }
 
 section#omos .profil h2 {
-    width: 400px;
-    text-align: center;
+    padding: 0px 0 0;
+    width: 300px;
     margin: 20px auto;
 }
 
 section#omos .profil p {
-    width: 400px;
-    margin: 0 auto 50px auto;
+    padding: 0px 0 0 0;
+    width: 300px;
+    margin: auto;
 }
 
 section#omos .profil img {
     margin: 50px auto;
     display: block;
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -928,9 +930,6 @@ section#omos .profil img {
         height: 400px;
     }
 
-
-
-
     .burger_icon,
     .burger_menu {
         display: none;
@@ -978,7 +977,7 @@ section#omos .profil img {
 
 
 
-
+    /***************/
     /* Landingpage */
     section#landingpage .wrapper {
         padding: 25px 0 30px 0;
@@ -993,6 +992,93 @@ section#omos .profil img {
         width: 100%;
         height: 500px;
     }
+
+
+    /* Om os */
+    /**********/
+    section#omos .wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    section#omos .profil {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section#omos .profil img {
+        margin: 50px 50px;
+        float: right;
+    }
+
+    section#omos .profil p {
+        margin: 0;
+    }
+    section#omos .profil h2 {
+        margin: 20px 0;
+        padding: 40px 0 0;
+    }
+
+    section#omos .profil .tekst .inner {
+        margin: 50px;
+    }
+
+    section#omos .profil {
+        padding: 50px 0;
+    }
+
+
+    /* Værker */
+    /***********/
+    .container {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        height: calc(100vh - 50px);
+        display: grid;
+        grid-template-columns: 1fr 300px;
+    }
+
+    #side_products {
+        display: grid;
+        margin: 0px 0 0 0;
+        grid-template-columns: 1fr;
+        overflow: auto;
+        overflow-y: scroll;
+        background-color: white;
+        height: 100vh;
+    }
+
+    #side_products article {
+        height: 300px;
+    }
+
+    #side_products article:last-child {
+        margin-bottom: 100px;
+    }
+
+    #side_products article .product .image_box {
+        height: 260px;
+    }
+
+
+    /* Products container */
+    /**********************/
+
+    #products_container {
+        position: relative;
+        display: block;
+    }
+
+    .popup_image_top {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        opacity: 0.4;
+        width: 100%;
+        height: 100%;
+    }
+
+
 
 
 

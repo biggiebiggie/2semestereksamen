@@ -51,11 +51,15 @@ function openModal() {
 		if (myId == product.id) {
 			//             document.querySelector("#popup").style.visibility = "visible";
 
+			document.querySelector("[data-singleTitle]").textContent = product.title.rendered;
+
 			document.querySelector("[data-singleImageTop]").src = product.acf.presentation_picture.url;
+
+			document.querySelector("[data-singleImageTop]").alt = product.acf.presentation_picture.alt;
 
 			document.querySelector("[data-description]").innerHTML = product.content.rendered;
 
-			//			 document.querySelector("[]")
+			document.querySelector("[data-vedligeholdelse]").innerHTML = product.acf.maintainence;
 		}
 
 	});

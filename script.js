@@ -15,7 +15,7 @@ async function hentJson() {
 	showProducts();
 }
 
-function showProducts()  {
+function showProducts()  {
 	products.forEach(product => {
 		let klon = template.cloneNode(true).content;
 

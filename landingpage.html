@@ -44,18 +44,17 @@
                     </div>
 
 
-                    <div class="tekst">
-                        <form class="skrrt" action="tilmeld.php">
-                            <h2>Tilmeld dig vores nyhedsbrev!</h2><br>
-                            <label for="navn">Navn: </label><br>
-                            <input type="text" name="navn" required><br>
-                            <label for="email">Email: </label><br>
-                            <input type="email" name="email" required><br>
-                            <label for="number">Alder: </label><br>
-                            <input type="age" name="age" required><br>
-                            <input type="submit" class="submit" value="Tilmeld nu!">
-                        </form>
-                    </div>
+       <div data-bookingSection id="deltag_section">
+		<h3>Deltag i konkurrencen</h3>
+		<form action="konkurrence.php">
+			<label for="navn">Navn: </label><br>
+			<input type="text" name="navn" required><br>
+			<label for="email">Email: </label><br>
+			<input type="email" name="email" required><br>
+			<input data-booking type="hidden" name="bookingemail" value="">
+			<input type="submit" class="submit" value="Deltag nu!">
+		</form>
+</div>
 
 
                 </article><br>

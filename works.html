@@ -25,34 +25,48 @@
             </ul>
         </nav>
     </header>
-    <main>
-       <div class="container">
-        <section id="products_container">
-                <div id="popup">
-    <div id="popupindhold">
-        <section id="single_item">
-		<h1 class="single_title">Hej heheheheh</h1>
-		<div class="popup_mage_top">
-			<img data-singleImageTop class="product_1" src="assets/dimsum.jpg" alt="">
-		</div>
-		<div data-description class="single_container_text">
 
-		</div>
-	</section>
-
-	<section id="vedligeholdelse ">
-		<h1>Vedligeholdelse</h1>
-		<img class="sing">
-		<div class="single_container_text">
-			<p>bla bla bbla bl alablab</p>
-		</div>
-	</section>
+    <div class="burger_icon">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
     </div>
-</div>
-        </section>
-        <section id="side_products">
 
-        </section>
+    <nav id="burger_menu">
+        <ul>
+            <li><a class="active" href="index.html">Forside</a></li>
+            <li><a href="works.html">Værker</a></li>
+            <li><a href="konceptet.html">Konceptet</a></li>
+            <li><a href="omos.html">Om os</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section id="products_container">
+                <div id="wrapper">
+                    <section id="single_item">
+                        <h1 class="single_title">Hej heheheheh</h1>
+                        <div class="popup_image_top">
+                            <img data-singleImageTop class="product_1" src="assets/riflet.jpg" alt="">
+                        </div>
+                        <div data-description class="single_container_text">
+
+                        </div>
+                    </section>
+
+                    <section id="vedligeholdelse">
+                        <h1>Vedligeholdelse</h1>
+                        <img class="sing">
+                        <div class="single_container_text">
+                            <p>bla bla bbla bl alablab</p>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <section id="side_products">
+
+            </section>
         </div>
     </main>
 
@@ -63,7 +77,9 @@
 		<div class="product" data-product>
 			<div class="id" data-id></div>
 
-			<h2 class="navn" data-name></h2>
+            <div class="tekst">
+                <h2 class="navn" data-name></h2>
+            </div>
 
 			<div class="image_box">
 			    <img class="image" data-image src="" alt="">
@@ -72,7 +88,7 @@
 		</article>
 	</template>
 
-<!--
+    <!--
     <section id="footer">
     </section>
 
@@ -90,6 +106,16 @@
 
 
     <script src="script.js">
+    </script>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".burger_icon").classList.toggle("change");
+            document.querySelector("#burger_menu").classList.toggle("show");
+        }
+
+        document.querySelector(".burger_icon").addEventListener("click", toggleMenu);
+        document.querySelector("#burger_menu").addEventListener("click", toggleMenu);
     </script>
 </body>
 

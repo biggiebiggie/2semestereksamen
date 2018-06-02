@@ -69,6 +69,8 @@
         </ul>
     </nav>
 
+    <!-- Submenu -->
+
     <header>
         <nav id="submenu">
             <ul>
@@ -127,23 +129,6 @@
 
         </section>
 
-        <section id="find_vej">
-            <div class="wrapper">
-                <div class="tekst">
-                    <h2>Jeg er lige rundt om hjørnet!</h2>
-                    <p>Vi har åbent i butikken:</p><br>
-                    <p>Mandag-Onsdag-Fredag: 1000 - 1730 <br>Tirsdag: Ofte åbent 1100 - 1700, venligst tjek med mig.
-                        <br>Torsdag: 1000 - 1800
-                        <br>Lørdag: 1100 - 1600</p>
-                    <br>
-                    <p>Venligst tjek i ferieperioden, da vores åbningstider kan variere.</p>
-
-                    <p>Du finder os bag den røde dør!
-                    </p>
-                </div>
-                <div id="map"></div>
-            </div>
-        </section>
     </main>
 
     <section id="footer">
@@ -159,81 +144,13 @@
         }
     </script>
 
-
-    <script>
-        function toggleMenu() {
-            document.querySelector(".burger_icon").classList.toggle("change");
-            document.querySelector("#burger_menu").classList.toggle("show");
-        }
-
-        document.querySelector(".burger_icon").addEventListener("click", toggleMenu);
-        document.querySelector("#burger_menu").addEventListener("click", toggleMenu);
-    </script>
-
-
-
-
-
-
-
-
-
+    <script src="burgermenu.js"></script>
 
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 
     <script src="jquery.js"></script>
 
-    <script>
-        function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 12,
-                center: {
-                    lat: 55.693098,
-                    lng: 12.543117
-                }
-            });
-
-            let marker = new google.maps.Marker({
-                position: {
-                    lat: 55.693098,
-                    lng: 12.543117
-                },
-                map: map
-            });
-
-            //	 })
-            //            var geocoder = new google.maps.Geocoder();
-            //
-            //            window.addEventListener("load", function() {
-            //                geocodeAddress(geocoder, map);
-            //            });
-            //
-            var infowindow = new google.maps.InfoWindow({
-                content: '<h2>Keramiker Inge Vincents</h2>' + '<p>Åbningstider: Mandag Onsdag Fredag: 10-17:30<br>Tirsdag: 11-17<br>Torsdag: 10-18<br>Lørdag: 11-16</p>' + '<p>Besøg mig på: </p><a href="http://www.vincents.dk/da/">www.vincents.dk</a>'
-            });
-
-            marker.addListener('click', function() {
-                infowindow.open(map, marker);
-            });
-        }
-
-        //        function geocodeAddress(geocoder, resultsMap) {
-        //            var address = "Jægersborggade 43, 2200 København, Danmark";
-        //            geocoder.geocode({
-        //                'address': address
-        //            }, function(results, status) {
-        //                if (status === 'OK') {
-        //                    resultsMap.setCenter(results[0].geometry.location);
-        //                    var marker = new google.maps.Marker({
-        //                        map: resultsMap,
-        //                        position: results[0].geometry.location
-        //                    });
-        //                } else {
-        //                    alert('Geocode was not successful for the following reason: ' + status);
-        //                }
-        //            });
-        //        }
-    </script>
+    <script src="maps.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1zJ0R1w7CmBEO1IKZ0L-09yMIRuFl8gI&callback=initMap">
     </script>
 </body>

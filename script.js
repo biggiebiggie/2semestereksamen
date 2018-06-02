@@ -60,6 +60,8 @@ function openModal() {
 			document.querySelector("[data-description]").innerHTML = product.content.rendered;
 
 			document.querySelector("[data-vedligeholdelse]").innerHTML = product.acf.maintainence;
+
+            document.querySelector("[data-backgroundImage]").src = product.acf.background_picture.url;
 		}
 
 	});

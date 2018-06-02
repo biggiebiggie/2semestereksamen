@@ -15,6 +15,25 @@
 
 <body>
 
+    <!-- Burger menu -->
+
+    <div class="burger_icon">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
+    <nav id="burger_menu">
+        <ul>
+            <li><a class="active" href="index.html">Forside</a></li>
+            <li><a href="works.html">Værker</a></li>
+            <li><a href="koncept.html">Koncept</a></li>
+            <li><a href="omos.html">Om os</a></li>
+        </ul>
+    </nav>
+
+    <!-- Submenu -->
+
     <header>
         <nav id="submenu">
             <ul>
@@ -26,11 +45,6 @@
         </nav>
     </header>
     <main>
-        <!--
-        <section id="banner">
-            <img src="">
-        </section>
--->
 
         <section id="omos">
             <div class="profil">
@@ -48,7 +62,7 @@
                 <article>
                     <h3>1.</h3>
                     <h4>Historie</h4>
-                    <p>Orton Cone Box Show 2006, var Inges første prisuddelling. Dette var starten på den ekstraordinære rejse Inge Vincent har været på i kunstverden. <br><br>Året efter modtog hun et rejselegat fra Knuud Højgaards Fonden, hvorved hun i de efterfølgende år er taget på studierejser i Sydkorea og Japan. <br>Som årene er gået har hendes værker været på flere udstillinger verden rundt, hvor hun også har vundet nogle flere awards.
+                    <p>Orton Cone Box Show 2006, var Inges første prisuddelling. Dette var starten på den ekstraordinære rejse Inge Vincent har været på i kunstverden. <br><br>Året efter modtog hun et rejselegat fra Knuud Højgaards Fonden, hvorved hun i de efterfølgende år er taget på studierejser i Sydkorea og Japan.
 </p>
                 </article>
 
@@ -61,15 +75,34 @@
                 <article>
                     <h3>3.</h3>
                     <h4>Vision</h4>
-                    <p>En plads hos forbrugernes bevidsthed er et must i fremtiden. Inge Vincent vil fortsætte med at lave sine værker og øge hendes kendskabsgrad. Dertil er der plads til lancering af nye modeller og eksperimentering. <br><br>Værkerne skal holdes ekslusivt, unikt og niche, hvorved hun kan holde fast i sine kerneværdier, samtidig med at fortsætte med at blive anerkendt.
+                    <p>En bedre plads hos forbrugernes bevidsthed er et must i fremtiden. Inge Vincent vil fortsætte med at lave sine værker og øge hendes kendskabsgrad. <br><br>Værkerne skal holdes ekslusivt, unikt og niche, hvorved hun kan holde fast i sine kerneværdier, samtidig med at fortsætte med at blive anerkendt.
                     </p>
                 </article>
-
             </div>
 
 
-
         </section>
+        <section id="find_vej">
+            <div class="wrapper">
+                <div class="tekst">
+                    <h2>Vi er lige rundt om hjørnet!</h2>
+                    <p>Vi har åbent i butikken:</p><br>
+                    <p>Mandag: 10.00 - 17.30<br>
+                       Tirsdag: 11.00 - 17.00<br>
+                       Onsdag: 10.00 - 17.30<br>
+                       Torsdag: 10.00 - 18.00<br>
+                       Fredag: 10.00 - 17.30<br>
+                       Lørdag: 11.00 - 16.00<br>
+                       </p>
+                    <br>
+
+                    <p>Du finder os bag den røde dør!
+                    </p>
+                </div>
+                <div id="map"></div>
+            </div>
+        </section>
+
 
 
     </main>
@@ -85,6 +118,12 @@
             let footer = await footerData.text();
             document.querySelector("#footer").innerHTML = footer;
         }
+    </script>
+
+    <script src="burgermenu.js"></script>
+
+    <script src="maps.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1zJ0R1w7CmBEO1IKZ0L-09yMIRuFl8gI&callback=initMap">
     </script>
 
 

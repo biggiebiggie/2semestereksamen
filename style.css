@@ -114,7 +114,7 @@ section#intro_site:hover #logo {
     width: 250px;
     height: 150px;
     left: calc(50% - 125px);
-    top: calc(50% - 250px);
+    top: calc(50% - 125px);
     position: relative;
 }
 
@@ -294,8 +294,8 @@ video {
     padding: 0 20px;
     color: #898989;
     text-decoration: none;
-    font-size: 1.5em;
-    margin: 20px 5%;
+    font-size: 1.1em;
+    margin: 15px 5%;
 }
 
 #burger_menu a:hover {
@@ -343,7 +343,7 @@ header {
 #submenu li a {
     display: block;
 
-    color: #a7a7a7;
+    color: #afafaf;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -358,7 +358,7 @@ header {
 }
 
 #submenu .active {
-    color: #767676;
+    color: #656565;
 }
 
 
@@ -835,13 +835,13 @@ section#omos .wrapper article {
 
 section#omos .wrapper article h3 {
     font-size: 2em;
-    font-weight: 400;
+    font-weight: 300;
     margin: 15px 0 0 0;
 }
 
 section#omos .wrapper article h4 {
     font-size: 1.2em;
-    font-weight: 400;
+    font-weight: 300;
     margin: 5px 0 15px 0;
     padding: 0;
 }
@@ -883,6 +883,7 @@ section#omos .profil img {
     display: block;
     width: 300px;
     height: 300px;
+    opacity: 0.9;
     border-radius: 50%;
 }
 
@@ -893,65 +894,94 @@ section#omos .profil img {
 
 section#koncept .wrapper {
     display: grid;
-    margin: 0 0 80px 0;
+    margin: 0 0 0px 0;
     grid-template-columns: repeat(1, 1fr);
 }
 
-section#koncept article {
+section#koncept .wrapper article {
     background-color: white;
     min-height: calc(100vh);
 }
 
-section#koncept article:nth-child(2) {
+section#koncept .wrapper article:nth-child(2) {
     background-color: white;
     margin-bottom: 50px;
     min-height: auto;
 }
 
-section#koncept article:nth-child(3) {
-    background-color: #eee;
+section#koncept .koncept-wrapper article:nth-child(1) {
+    background-color: white;
 }
 
-section#koncept article:nth-child(4) {
-    background-color: #eee;
-}
-
-section#koncept article h1 {
+section#koncept .wrapper article h1 {
     padding: 80px 0 5px 0;
     font-weight: 300;
 }
 
-section#koncept article p {
+section#koncept .wrapper article p {
     padding: 0 55px;
     max-width: 400px;
     margin: 0 auto;
     line-height: 2;
 }
 
-section#koncept article:first-child {
+section#koncept .wrapper article:first-child {
     background-image: url(assets/inge3.jpg);
     background-size: cover;
-    opacity: 0.9;
+    opacity: 0.8;
     background-position: center;
 }
 
+/* Koncept wrapper */
+
+/*******************/
+
+section#koncept .koncept-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 500px;
+    margin-left: 250px;
+    grid-gap: 25px;
+}
+
+section#koncept .koncept-wrapper article {
+    background-color: #eee;
+}
+
+
 blockquote {
-    margin: 4.5em 10px;
-    padding: 10px;
-    quotes: "\201C""\201D""\2018""\2019";
+    font-size: 2em;
+    margin: 25px;
+    padding: 20px 40px;
+    line-height: 1.45;
+    position: relative;
+    color: #555555;
 }
 
 blockquote:before {
-    color: #9b9b9b;
-    content: open-quote;
-    font-size: 4em;
-    line-height: 0.1em;
-    margin-right: 0.25em;
-    vertical-align: -0.4em;
+    display: block;
+    padding-left: 10px;
+    content: "\0022";
+    font-size: 100px;
+    position: absolute;
+    left: -10px;
+    top: -20px;
+    color: #555555;
+
 }
 
-blockquote p {
-    display: inline;
+blockquote cite {
+    color: #999999;
+    font-size: 0.6em;
+    display: block;
+    font-style: normal;
+    margin-top: 15px;
+}
+
+/* SVG */
+
+#kn1, #kn2, #kn3, #kn4:hover {
+    cursor: pointer;
 }
 
 
@@ -1040,13 +1070,22 @@ blockquote p {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    section#koncept article {
-        height: calc(100vh - 50px);
+    section#koncept .wrapper article {
+        min-height: calc(100vh - 50px);
     }
 
-    section#koncept article:nth-child(2) {
-        height: calc(100vh - 50px);
-    margin-bottom: 0px;
+
+    section#koncept .wrapper article:first-child {
+
+    }
+
+    section#koncept .wrapper article:nth-child(2) {
+        min-height: calc(100vh - 50px);
+        margin-bottom: 0px;
+    }
+
+    section#koncept .wrapper article p {
+        padding-bottom: 40px;
     }
 
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keramiker Inge Vincents</title>
+    <title>Keramiker Inge Vincents - Konkurrence</title>
     <meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="style.css">
     <meta name="Showroom Keramiker Inge Vincents" content="Showroom om Keramiker Inge Vincents værker">
@@ -16,6 +16,27 @@
 <body>
 
     <header>
+        <!-- Burger menu -->
+
+        <div class="burger_icon">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+
+        <nav id="burger_menu">
+            <ul>
+                <li><a class="active" href="index.html">Forside</a></li>
+                <li><a href="works.html">Værker</a></li>
+                <li><a href="koncept.html">Koncept</a></li>
+                <li><a href="omos.html">Om os</a></li>
+                <li><a href="omos.html#find_vej">Find os</a></li>
+            </ul>
+        </nav>
+
+        <!--- Sub menu --->
+
         <nav id="submenu">
             <ul>
                 <li><a class="" href="index.html">Forside</a></li>
@@ -29,33 +50,36 @@
     <main>
         <section id="landingpage">
             <div class="wrapper">
-                <iframe src="https://www.youtube.com/embed/ChSq2MfTsHU?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <div class="iframe">
+                    <iframe src="https://www.youtube.com/embed/ChSq2MfTsHU?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
             </div>
 
+            <h1>Dette er hvad du kan vinde!</h1>
         </section>
         <section id="content">
             <div class="wrapper">
 
-        <h1>Dette er hvad du kan vinde!</h1>
                 <article>
                     <div class="tekst">
                         <li>Traditionelt håndlavet thinware vase, xxcm X xxcm.</li>
-                        <li>Tre tilfældige vindere uddeles en af disse vaser. </li><li>Vinderen trækkes d. xx/xx.</li><br>
-                         <p>For at deltage bedes du blot tagge 2 venner, og udfylde formularen efter at have fulgt linket.</p>
+                        <li>Tre tilfældige vindere uddeles en af disse vaser. </li>
+                        <li>Vinderen trækkes d. xx/xx.</li><br>
+                        <p>For at deltage bedes du blot tagge 2 venner, og udfylde formularen efter at have fulgt linket.</p>
                     </div>
 
 
-       <div data-bookingSection id="deltag_section">
-		<h3>Deltag i konkurrencen</h3>
-		<form action="konkurrence.php">
-			<label for="navn">Navn: </label><br>
-			<input type="text" name="navn" required><br>
-			<label for="email">Email: </label><br>
-			<input type="email" name="email" required><br>
-			<input data-booking type="hidden" name="bookingemail" value="">
-			<input type="submit" class="submit" value="Deltag nu!">
-		</form>
-</div>
+                    <div data-bookingSection id="deltag_section">
+                        <h3>Deltag i konkurrencen</h3>
+                        <form action="konkurrence.php">
+                            <label for="navn">Navn: </label><br>
+                            <input type="text" name="navn" required><br>
+                            <label for="email">Email: </label><br>
+                            <input type="email" name="email" required><br>
+                            <input data-booking type="hidden" name="bookingemail" value="">
+                            <input type="submit" class="submit" value="Deltag nu!">
+                        </form>
+                    </div>
 
 
                 </article><br>

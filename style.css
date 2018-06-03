@@ -14,6 +14,16 @@ body {
     color: #555555;
 }
 
+a {
+    color: #555555;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #000000;
+}
+
 
 
 /* Heading */
@@ -414,6 +424,23 @@ section#content .wrapper article .billede {
     position: relative;
     height: 300px;
     overflow: hidden;
+}
+
+section#content .wrapper article .billede img {
+    transform: scale(1);
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+}
+
+section#content .wrapper article .billede img:hover {
+    transform: scale(1.07);
+    position: absolute;
 }
 
 section#content .wrapper article img {
@@ -895,7 +922,7 @@ section#omos .profil img {
 section#koncept .wrapper {
     display: grid;
     margin: 0 0 0px 0;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1s, 1fr);
 }
 
 section#koncept .wrapper article {
@@ -939,13 +966,19 @@ section#koncept .wrapper article:first-child {
 section#koncept .koncept-wrapper {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    max-width: 500px;
-    margin-left: 250px;
-    grid-gap: 25px;
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto 50px auto;
+    grid-gap: 0px;
+}
+
+section#koncept .koncept-wrapper article:first-child {
+    margin: 40px;
 }
 
 section#koncept .koncept-wrapper article {
-    background-color: #eee;
+    margin: 0px;
+    position: relative;
 }
 
 
@@ -980,13 +1013,119 @@ blockquote cite {
 
 /* SVG */
 
-#kn1, #kn2, #kn3, #kn4:hover {
+#kn1,
+#kn2,
+#kn3,
+#kn4:hover {
     cursor: pointer;
 }
 
+.top {
+    width: 100%;
+    background-color: #eee;
+    padding: 1px 0;
+    margin-bottom: 30px
+}
+
+.bottom {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-image: url(assets/lysposer.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    transition: all 0.5s ease;
+}
+
+.bottom:hover {
+    opacity: 0.8;
+}
 
 
+.bottom h3 {
+    position: absolute;
+    height: 50px;
+    top: 50%;
+    margin-top: -25px;
+    width: 100%;
+    color: white;
+    z-index: 10;
+    line-height: 50px;
+    color: white;
+    font-size: 1.5em;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.62);
+    text-align: center;
+}
 
+
+/* Landingpage */
+
+section#landingpage h1 {
+    color: #555555;
+    padding: 0;
+    margin: 25px 0 0 0;
+    font-weight: 300;
+    font-size: 1.8em;
+}
+
+.iframe {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+.iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Form */
+
+#deltag_section h3 {
+    text-align: center;
+}
+
+input[type=text],
+input[type=email],
+select {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 0px auto;
+    display: block;
+    border: 1px solid #ccc;;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    margin: 0 auto;
+    height: 0;
+    width: 80%;
+    padding: 0;
+}
+
+input[type=submit] {
+    width: 80%;
+    background-color: #555555;
+    color: white;
+    padding: 14px 20px;
+    margin: 18px auto;
+    display: block;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #555555;
+}
 
 
 
@@ -1075,9 +1214,7 @@ blockquote cite {
     }
 
 
-    section#koncept .wrapper article:first-child {
-
-    }
+    section#koncept .wrapper article:first-child {}
 
     section#koncept .wrapper article:nth-child(2) {
         min-height: calc(100vh - 50px);
@@ -1088,6 +1225,32 @@ blockquote cite {
         padding-bottom: 40px;
     }
 
+    section#koncept .koncept-wrapper article {
+        margin: 40px;
+    }
+
+    section#koncept .koncept-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+    }
+
+    section#koncept .koncept-wrapper article:first-child {
+        margin: 0px;
+        margin-left: 25px;
+    }
+
+    section#koncept .koncept-wrapper article:nth-child(2) {
+        margin-left: 50px;
+    }
+
+    section#koncept .koncept-wrapper article {
+        margin: 0px;
+    }
+
+    .top {
+
+        padding: 20px 0;
+    }
 
 
 
@@ -1133,11 +1296,6 @@ blockquote cite {
         background-color: white;
         width: 90%;
         position: relative;
-    }
-
-    section#landingpage .wrapper iframe {
-        width: 100%;
-        height: 500px;
     }
 
 
@@ -1232,6 +1390,7 @@ blockquote cite {
         width: 100%;
         margin: 0 auto;
         font-size: 1em;
+        text-transform: lowercase;
     }
 
 
@@ -1263,12 +1422,11 @@ blockquote cite {
     #products_container .wrapper {
         position: absolute;
         padding: 25px;
-        left: calc(50% - 325px);
-        height: 600px;
+        left: calc(50% - 300px);
+        height: 500px;
         width: 600px;
-        top: calc(50% - 355px);
+        top: calc(50% - 300px);
         z-index: 2;
-        background-color: white;
     }
 
 
@@ -1277,25 +1435,26 @@ blockquote cite {
         text-align: left;
         text-transform: lowercase;
         margin: 0px 0;
-        font-size: 3em;
+        padding: 0;
+        font-size: 2.1em;
         height: 90px;
         line-height: 100px;
         font-weight: 300;
     }
 
     .popup_container_text {
-        font-size: 1.1em;
+        font-size: 1em;
         line-height: 1.5;
-        padding: 20px 0;
+        padding: 10px 0;
         height: 80px;
     }
     .popup_image_top {}
 
     .popup_image_top img {
         position: relative;
-        height: 400px;
+        width: 80%;
+        opacity: 0.9;
         display: block;
-        margin: 0 auto;
     }
 
     .popup_background_image {

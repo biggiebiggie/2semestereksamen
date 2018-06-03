@@ -161,9 +161,6 @@ section#intro_site img {
     transition: all 0.3s ease;
 }
 
-#logo:hover {
-    transform: scale(1.05);
-}
 
 
 /* Arrow */
@@ -503,6 +500,10 @@ footer {
     color: rgb(96, 96, 96);
     background-color: #eee;
     display: block;
+}
+
+footer a {
+    text-decoration: none;
 }
 
 footer .wrapper {

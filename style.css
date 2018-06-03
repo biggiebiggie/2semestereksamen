@@ -1139,6 +1139,11 @@ https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
     height: 100%;
 }
 
+.thinware {
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
 /* Form */
 
 #deltag_section h3 {

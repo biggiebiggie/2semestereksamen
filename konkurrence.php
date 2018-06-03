@@ -1,6 +1,6 @@
 <?php
 
-$to=$_REQUEST['elia0649@stud.kea.dk'];
+$to="elia0649@stud.kea.dk";
 
 $navn=$_REQUEST['navn'];
 $email=$_REQUEST['email'];

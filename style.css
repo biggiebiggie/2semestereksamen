@@ -421,7 +421,8 @@ section#content .wrapper article {
     position: relative;
     background-color: white;
     overflow: hidden;
-    min-height: 600px;
+    min-height: 400px;
+    margin-bottom: 30px;
 
     display: grid;
     grid-template-columns: repeat(1, 1fr);

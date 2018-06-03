@@ -42,7 +42,6 @@
     <main>
         <div class="single_container">
             <section id="single_products_container">
-               <video id="video-background" src="assets/bg2.mov" playsinline loop muted autoplay></video>
                 <div class="wrapper">
                     <section id="single_item">
 
@@ -78,6 +77,19 @@
             </section>
         </div>
     </main>
+    <section id="footer">
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", hentFooter);
+
+        async function hentFooter() {
+            let footerData = await fetch("footer.html");
+            let footer = await footerData.text();
+            document.querySelector("#footer").innerHTML = footer;
+        }
+
+    </script>
 	<script src="burgermenu.js"></script>
 	<script>
 	let products;

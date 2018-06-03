@@ -167,7 +167,7 @@ section#intro_site img {
 
 /*********/
 
-section#intro_site .arrow {
+.arrow2 {
     opacity: 0.7;
     background: url('assets/arrow.svg');
     background-position: center;
@@ -180,7 +180,25 @@ section#intro_site .arrow {
     bottom: 50px;
 }
 
-section#intro_site .arrow:hover {
+.arrow2:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.arrow2 {
+    opacity: 0.9;
+    background: url('assets/arrow.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    position: absolute;
+    width: 44px;
+    height: 30px;
+    left: calc(50% - 22px);
+    bottom: 50px;
+}
+
+.arrow2:hover {
     cursor: pointer;
     opacity: 1;
 }
@@ -283,6 +301,7 @@ video {
 #burger_menu.show {
     display: block;
     position: fixed;
+    box-shadow: 0 0px 1050px rgba(0, 0, 0, 0.24);
     width: 50vw;
     height: 100vh;
     margin: 0;
@@ -836,14 +855,17 @@ h1 {
 }
 
 .single_image_top {
-    width: 100%;
-    height: auto;
-
-    margin: 0 auto;
+    margin: 0 auto 30px 0;
 }
 
-.single_container_text {
-    margin: 0 2vw 0 2vw;
+.single_image_top img {
+    height: 66.2vw;
+    width: 100vw;
+}
+
+#single_item .single_container_text {
+    margin: -20px 30px 50px 30px;
+    text-align: left;
 }
 
 .product_1 {
@@ -852,8 +874,9 @@ h1 {
 }
 
 #single_vedligeholdelse {
-    width: 90%;
-    margin: 0 auto;
+    background-color: #eee;
+    margin: 30px;
+    padding: 0 25px 30px 25px;
 }
 
 #single_vedligeholdelse h1 {
@@ -861,6 +884,10 @@ h1 {
     text-align: left;
     margin: 0;
     padding: 40px 0;
+}
+
+.single_background_image {
+    display: none;
 }
 
 /* Desktop */
@@ -1502,6 +1529,10 @@ input[type=submit]:hover {
     }
 
     section#vedligeholdelse {
+        display: none;
+    }
+
+    .arrow2 {
         display: none;
     }
 

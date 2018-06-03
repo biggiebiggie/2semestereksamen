@@ -11,6 +11,12 @@ $(".arrow").click(function () {
     }, 1000);
 });
 
+$(".arrow2").click(function () {
+    $('html,body').animate({
+        scrollTop: $(".koncept_scroll").offset().top
+    }, 1000);
+});
+
 $(".up").click(function () {
     $('html,body').animate({
         scrollTop: $("#intro_site").offset().top

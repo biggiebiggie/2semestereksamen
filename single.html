@@ -69,10 +69,10 @@
 
 	function openSingle() {
 
-		retter.forEach(ret => {
+		products.forEach(product => {
 
-			if (ret.id == urlID) {
-				console.log(ret.id, urlID);
+			if (product.id == urlID) {
+				console.log(product.id, urlID);
 
 
 			document.querySelector("[data-title]").textContent = product.title.rendered;
@@ -88,7 +88,6 @@
             document.querySelector("[data-backgroundImage]").src = product.acf.background_picture.url;
 		}
 
-			}
 		});
 	}
 	</script>

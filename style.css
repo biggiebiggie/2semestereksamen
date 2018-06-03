@@ -1077,6 +1077,12 @@ section#landingpage h1 {
     height: 0;
 }
 
+/** Responsive iframe
+
+https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
+
+**/
+
 .iframe iframe {
     position: absolute;
     top: 0;

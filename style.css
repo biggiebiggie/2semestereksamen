@@ -1130,6 +1130,26 @@ section#landingpage h1 {
     height: 0;
 }
 
+.tak_wrapper {
+    max-width: 1080px;
+    margin: 100px auto 50px auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.tak_wrapper .tekst {
+    padding: 40px;
+    min-height: 300px;
+    line-height: 1.5;
+    background-color: #eee;
+}
+
+.tak_wrapper .bottom {
+    margin-top: 40px;
+    min-height: 380px;
+}
+
 /** Responsive iframe
 
 https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
@@ -1372,6 +1392,21 @@ input[type=submit]:hover {
         background-color: white;
         width: 90%;
         position: relative;
+    }
+
+    .tak_wrapper {
+        max-width: 1080px;
+        margin: 50px auto 50px auto;
+        width: 90%;
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tak_wrapper .tekst {}
+
+    .tak_wrapper .bottom {
+        margin-top: 0px;
     }
 
 

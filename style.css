@@ -1107,6 +1107,10 @@ blockquote cite {
     text-align: center;
 }
 
+.la {
+    height: 300px
+}
+
 
 /* Landingpage */
 
@@ -1163,7 +1167,8 @@ select {
     padding: 12px 20px;
     margin: 0px auto;
     display: block;
-    border: 1px solid #ccc;;
+    border: 1px solid #ccc;
+    ;
     box-sizing: border-box;
 }
 
@@ -1266,6 +1271,10 @@ input[type=submit]:hover {
 
     #submenu {
         display: block;
+    }
+
+    .la {
+        height: 400px
     }
 
 

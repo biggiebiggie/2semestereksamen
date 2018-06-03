@@ -799,6 +799,16 @@ a.slide_btn {
     z-index: -1;
 }
 
+#side_products article .product .image_box img {
+    transform: scale(1);
+    transition: all 0.4s ease;
+
+}
+
+#side_products article .product:hover img {
+    transform: scale(1.1);
+}
+
 #side_products article .product h2 {
     color: #393939;
     background-color: white;
@@ -1035,8 +1045,8 @@ blockquote cite {
     background-image: url(assets/lysposer.jpg);
     background-size: cover;
     background-position: center;
-    opacity: 0.7;
-    transition: all 0.5s ease;
+    opacity: 0.65;
+    transition: all 0.3s ease;
 }
 
 .bottom:hover {

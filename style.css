@@ -167,7 +167,7 @@ section#intro_site img {
 
 /*********/
 
-.arrow2 {
+.arrow {
     opacity: 0.7;
     background: url('assets/arrow.svg');
     background-position: center;
@@ -180,7 +180,7 @@ section#intro_site img {
     bottom: 50px;
 }
 
-.arrow2:hover {
+.arrow:hover {
     cursor: pointer;
     opacity: 1;
 }
